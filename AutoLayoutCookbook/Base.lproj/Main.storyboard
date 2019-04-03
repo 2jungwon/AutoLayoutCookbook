@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,30 +15,67 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayoutCookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xE-4y-yyK" userLabel="Blue">
-                                <rect key="frame" x="0.0" y="120" width="122.5" height="527"/>
+                                <rect key="frame" x="0.0" y="120" width="253.5" height="884"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rV4-ic-RFc" userLabel="Red">
-                                <rect key="frame" x="130.5" y="120" width="244.5" height="527"/>
+                                <rect key="frame" x="261.5" y="120" width="506.5" height="884"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlueRed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcB-0k-v1i">
+                                <rect key="frame" x="320" y="9" width="128.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RedBlue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92I-ua-2er">
+                                <rect key="frame" x="352" y="58" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rV4-ic-RFc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="3M5-Mw-HOr"/>
                             <constraint firstAttribute="trailing" secondItem="rV4-ic-RFc" secondAttribute="trailing" id="7xB-NJ-DJB"/>
                             <constraint firstItem="4xE-4y-yyK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="8lV-en-l96"/>
+                            <constraint firstItem="92I-ua-2er" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NDz-vD-MOX"/>
+                            <constraint firstItem="rV4-ic-RFc" firstAttribute="top" secondItem="OcB-0k-v1i" secondAttribute="bottom" constant="70" id="Ndg-p9-Uhc"/>
                             <constraint firstItem="rV4-ic-RFc" firstAttribute="leading" secondItem="4xE-4y-yyK" secondAttribute="trailing" constant="8" id="ShV-H5-rEm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4xE-4y-yyK" secondAttribute="bottom" constant="20" id="cUU-bu-i5C"/>
                             <constraint firstItem="4xE-4y-yyK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ee6-Ec-CrO"/>
+                            <constraint firstItem="OcB-0k-v1i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gO0-bU-1Cp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rV4-ic-RFc" secondAttribute="bottom" constant="20" id="mEU-vT-dcD"/>
+                            <constraint firstItem="92I-ua-2er" firstAttribute="top" secondItem="OcB-0k-v1i" secondAttribute="bottom" constant="8" id="nLR-5U-kSw"/>
                             <constraint firstItem="4xE-4y-yyK" firstAttribute="width" secondItem="rV4-ic-RFc" secondAttribute="width" multiplier="0.5" priority="750" id="qpI-7F-dzq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="92I-ua-2er"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="NDz-vD-MOX"/>
+                                <exclude reference="nLR-5U-kSw"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="92I-ua-2er"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="NDz-vD-MOX"/>
+                                <include reference="nLR-5U-kSw"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
